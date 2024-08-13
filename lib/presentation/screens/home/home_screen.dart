@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu-items.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
@@ -53,7 +54,9 @@ class _CustomListTile extends StatelessWidget {
         // Navigator.of(context).push( // OPCION 1 MUY LARGO Y TEDIOSO, PERMITE DEEP LINKS
         //   MaterialPageRoute(builder: (context) => const ButtonsScreen()),
         // );
-        // Navigator.of(context).pushNamed(menuItem.link); // OPCION 2 (NO PERMITE CUSTOMIZAR DEEP LINKS)
+        // Navigator.of(context).pushNamed(menuItem.link); // OPCION 2 (NO PERMITE CUSTOMIZAR DEEP LINKing)
+
+        context.push(menuItem.link); //OPCION 3 USO DE GO ROUTER
       },
     );
   }
