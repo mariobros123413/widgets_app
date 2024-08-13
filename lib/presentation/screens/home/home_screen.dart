@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu-items.dart';
-import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
+import 'package:widgets_app/presentation/screens/cards/cards_screen.dart';
 
 class HomeScreen extends StatelessWidget {
+  static final name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -57,6 +58,7 @@ class _CustomListTile extends StatelessWidget {
         // Navigator.of(context).pushNamed(menuItem.link); // OPCION 2 (NO PERMITE CUSTOMIZAR DEEP LINKing)
 
         context.push(menuItem.link); //OPCION 3 USO DE GO ROUTER
+        // context.pushNamed(CardsScreen.name); // CON NAME, PERO HAY QUE AGREGAR NAME A LA CLASS MENUITEMS.Name
       },
     );
   }
