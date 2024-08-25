@@ -56,4 +56,16 @@ const appMenuItems = <MenuItem>[
     link: '/infinite',
     icon: Icons.list_alt_outlined,
   ),
+  MenuItem(
+    title: 'Counter Screen',
+    subTitle: 'Aumentar el valor',
+    link: '/counter',
+    icon: Icons.plus_one_outlined,
+  ),
+  MenuItem(
+    title: 'Theme changer',
+    subTitle: 'Cambiar con un click el tema',
+    link: '/theme',
+    icon: Icons.color_lens_outlined,
+  ),
 ];
